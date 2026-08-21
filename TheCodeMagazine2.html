@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Basic Language of the Web: HTML — The Code Magazine</title>
+<style>
+  :root{
+    --teal:#2f97a3;
+    --teal-dark:#1d7d88;
+    --ink:#2b2b2b;
+    --muted:#5b5b5b;
+    --bg:#ffffff;
+    --panel:#f4f6f7;
+    --yellow:#f4d13a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: Georgia, 'Times New Roman', serif;
+    color:var(--ink);
+    background:var(--bg);
+  }
+  .topbar{height:6px;background:var(--teal);}
+  header.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 40px;
+    background:var(--panel);
+    flex-wrap:wrap;
+    gap:16px;
 
+  }
+  .brand{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:800;
+    font-style:italic;
+    font-size:1.5rem;
+    color:var(--teal-dark);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  nav.links{
+    display:flex;
+    gap:34px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    color:var(--teal-dark);
+  }
+  nav.links a{color:var(--teal-dark); text-decoration:none;}
+  nav.links a:hover{text-decoration:underline;}
+
+  main{
+    max-width:1100px;
+    margin:0 auto;
+    padding:36px 40px 80px;
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:40px;
+  }
+
+  .article-head{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+  }
+  .badge{
+    background:var(--yellow);
+    font-family: Arial, sans-serif;
+    font-weight:700;
+    font-size:.75rem;
+    letter-spacing:.05em;
+    padding:6px 14px;
+    align-self:flex-start;
+    margin-top:6px;
+  }
+  h1.title{
+    font-size:2.4rem;
+    line-height:1.15;
+    color:var(--teal-dark);
+    margin:0 0 20px;
+    font-weight:800;
+  }
+  .byline{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin:20px 0;
+    font-style:italic;
+    color:var(--ink);
+    font-size:0.9rem;
+  }
+  .avatar{
+    width:64px;height:64px;
+    object-fit:cover;
+    flex-shrink:0;
+    background:#ccc;
+  }
+  .hero-img{
+    width:100%;
+    max-height:340px;
+    object-fit:cover;
+    display:block;
+    margin:20px 0 30px;
+  }
+  article p{
+    font-size:1.15rem;
+    line-height:1.6;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  article h2{
+    color:var(--teal-dark);
+    font-size:1.8rem;
+    margin:40px 0 18px;
+  }
+  article ol, article ul{
+    font-size:1.15rem;
+    line-height:1.6;
+    padding-left:1.4em;
+    margin:0 0 20px;
+  }
+  article li{margin-bottom:6px;}
+  article a.inline-link{color:var(--teal-dark); font-weight:bold;}
+
+  aside{
+    border-top:4px solid var(--teal);
+    border-bottom:4px solid var(--teal);
+    padding:24px 0;
+  }
+  aside h3{
+    font-family: Arial, sans-serif;
+    color:var(--teal-dark);
+    font-size:1.1rem;
+    letter-spacing:.03em;
+    margin:0 0 24px;
+  }
+  .related-post{
+    display:flex;
+    gap:14px;
+    margin-bottom:26px;
+  }
+  .related-post img{
+    width:70px;height:60px;object-fit:cover;flex-shrink:0;
+  }
+  .related-post h4{
+    margin:0 0 6px;
+    font-size:1.05rem;
+    color:var(--teal-dark);
+    line-height:1.25;
+  }
+  .related-post span{
+    font-style:italic;
+    font-size:.9rem;
+    color:var(--muted);
+  }
+
+  footer{
+    text-align:center;
+    font-family: Arial, sans-serif;
+    font-size:.85rem;
+    color:var(--muted);
+    padding:30px 0 60px;
+  }
+
+  @media (max-width: 800px){
+    main{grid-template-columns:1fr;}
+    header.nav{padding:18px 20px;}
+    nav.links{gap:18px; font-size:.9rem;}
+  }
+
+.related-post:last-child{
+  padding-bottom:50px;
+  border-bottom:4px solid var(--teal);
+}
+
+</style>
+</head>
+<body>
+
+  <div class="topbar"></div>
+
+  <header class="nav">
+    <div class="brand">📘 THE CODE MAGAZINE</div>
+    <nav class="links">
+      <a href="#">Challenges</a>
+      <a href="#">Flexbox</a>
+      <a href="#">CSS Grid</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <div class="article-head">
+        <div>
+          <span class="badge">TOP</span>
+        </div>
+      </div>
+      <h1 class="title">The Basic Language of the Web: HTML</h1>
+
+      <div class="byline">
+        <img class="avatar" src="laura-jones.jpg" alt="Laura Jones">
+        <div>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</div>
+      </div>
+
+      <img class="hero-img" src="coding-img.jpg" alt="HTML code on screen">
+
+      <p>All modern websites and web applications are built using three <em>fundamental</em> technologies: HTML, CSS and JavaScript. These are the languages of the web.</p>
+      <p>In this post, let's focus on HTML. We will learn what HTML is all about, and why you too should learn it.</p>
+
+      <h2>What is HTML?</h2>
+      <p>HTML stands for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup language that web developers use to structure and describe the content of a webpage (not a programming language).</p>
+      <p>HTML consists of elements that describe different types of content: paragraphs, links, headings, images, video, etc. Web browsers understand HTML and render HTML code as websites.</p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+      <ol>
+        <li><strong>The opening tag</strong></li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+      <p>You can learn more at <a class="inline-link" href="#">MDN Web Docs</a>.</p>
+
+      <h2>Why should you learn HTML?</h2>
+      <p>There are countless reasons for learning the fundamental language of the web. Here are 5 of them:</p>
+      <ul>
+        <li><strong>To be able to use the fundamental web dev language</strong></li>
+        <li>To hand-craft beautiful websites instead of relying on tools like Wordpress or Wix</li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun</li>
+      </ul>
+    </article>
+
+    <aside>
+      <h3>RELATED POSTS</h3>
+
+      <div class="related-post">
+        <img src="jonas-schmedtmann.jpg" alt="How to Learn Web Development">
+        <div>
+          <h4> How to Learn Web Development</h4>
+          <span>By Jonas Schmedtmann</span>
+        </div>
+      </div>
+
+      <div class="related-post">
+        <img src="thunder-img.jpg" alt="The Unknown Powers of CSS">
+        <div>
+          <h4>The Unknown Powers of CSS</h4>
+          <span>By Jim Dillon</span>
+        </div>
+      </div>
+
+      <div class="related-post">
+        <img src="coding-img.jpg" alt="Why JavaScript is Awesome">
+        <div>
+          <h4>Why JavaScript is Awesome</h4>
+          <span>By Matilda</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>Copyright © 2022 by The Code Magazine.</footer>
+
+</body>
+</html>
