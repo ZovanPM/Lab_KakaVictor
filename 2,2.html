@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            body {
+                font-family: system-ui, sans-serif;
+                text-align: center;
+                margin-top: 40px;
+                color: #1f2937;
+            }
+            h1{
+                color: #2563eb;
+            }
+        </style>
+    </head>
+    <body>
+
+        <script>
+
+            const harga = 15000;
+            const diskonPersen = 20;
+            const potongan = harga * (diskonPersen / 100);
+            const hargaAkhir = harga - potongan;
+
+            console.log('Harga awal: Rp$(harga)');
+            console.log('Diskon ${diskonPersen}% = Rp${potongan}');
+            console.log('Harga akhir : Rp${hargaAkhir}');
+
+            const status = hargaAkhir < 10000 ? "Murah" : "Standar";
+            console.log('Kategori harga: ${status}');
+
+        </script>
+    </body>
+</html>
