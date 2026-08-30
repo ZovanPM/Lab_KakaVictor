@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 6.1 Latihan JavaScript</title>
+</head>
+
+<body>
+
+    <button id="tombol">Klik Saya</button>
+
+    <p id="paragraf">Warna belum diubah.</p>
+
+    <script>
+        const tombol = document.getElementById("tombol");
+        const paragraf = document.getElementById("paragraf");
+
+        tombol.addEventListener("click", () => {
+            paragraf.style.color = "red";
+            paragraf.textContent = "Warna sudah diubah!";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Soal 5.2 Latihan JavaScript</title>
+    </head>
+    <body>
+        <h1>Deskripsi Produk</h1>
+        
+        <script>
+            const produk = {
+            nama: "Laptop",
+            harga: 10000000,
+            stok: 5,
+
+            infoProduk() {
+                return `Produk ${this.nama} memiliki harga Rp${this.harga} dan stok sebanyak ${this.stok}.`;
+                }
+            };
+
+            console.log(produk.infoProduk());
+        </script>
+    </body>
+</html>

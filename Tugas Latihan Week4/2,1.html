@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Soal 2.1 Latihan JavaScript</title>
+    </head>
+    <body>
+        <h1>Hasil Ujian</h1>
+
+        <p id="hasil"></p>
+        
+        <script>
+            const nilaiUjian = 75;
+            const status = nilaiUjian >= 60 ? "Lulus" : "Tidak Lulus";
+            console.log(`Nilai ${nilaiUjian} - > ${status}`);
+            document.getElementById("hasil").textContent = `Nilai ${nilaiUjian} - > ${status}`;
+        </script>
+    </body>
+</html>

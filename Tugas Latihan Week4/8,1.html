@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 8.1 Latihan JavaScript</title>
+</head>
+
+<body>
+
+    <input type="password" id="password" placeholder="Masukkan password">
+
+    <button id="tombol">Tampilkan</button>
+
+    <script>
+        const password = document.getElementById("password");
+        const tombol = document.getElementById("tombol");
+
+        tombol.addEventListener("click", () => {
+            if (password.getAttribute("type") === "password") {
+                password.setAttribute("type", "text");
+                tombol.textContent = "Sembunyikan";
+            } else {
+                password.setAttribute("type", "password");
+                tombol.textContent = "Tampilkan";
+            }
+        });
+    </script>
+
+</body>
+</html>

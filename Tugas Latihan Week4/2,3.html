@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF-8">
+    <title>Soal 2.3 Latihan JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Perhitungan Kamar</h1>
+
+    <p id="hasil"></p>
+
+    <script>
+        const panjang = 10;
+        const lebar = 5;
+
+        const luas = panjang * lebar;
+        const keliling = 2 * (panjang + lebar);
+
+        const hasil = `Kamar dengan panjang ${panjang} m dan lebar ${lebar} m memiliki luas ${luas} m2 dan keliling ${keliling} m.`;
+
+        console.log(`Luas kamar: ${luas} m2`);
+        console.log(`Keliling kamar: ${keliling} m`);
+
+        document.getElementById("hasil").textContent = hasil;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soal 5.2 Latihan JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Object Mahasiswa</h1>
+
+    <script>
+        const mahasiswa = {
+            nama: "Citra",
+            nim: "2026001",
+            nilai: [80, 90, 75],
+
+            rataRata() {
+                const total = this.nilai.reduce((a, b) => a + b, 0);
+                return total / this.nilai.length;
+            }
+        };
+
+        console.log(mahasiswa.nama);
+
+        console.log(mahasiswa["nim"]);
+
+        console.log(`Rata-rata ${mahasiswa.nama}: ${mahasiswa.rataRata()}`);
+
+        const { nama, nim } = mahasiswa;
+
+        console.log(nama, nim);
+
+        const mahasiswaBaru = {
+            ...mahasiswa,
+            semester: 3
+        };
+
+        console.log(mahasiswaBaru);
+    </script>
+
+</body>
+</html>

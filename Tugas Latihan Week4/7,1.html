@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 7.1 Latihan JavaScript</title>
+</head>
+
+<body>
+
+    <button id="tombol">Klik Saya</button>
+
+    <p id="angka">0</p>
+
+    <script>
+        let jumlahKlik = 0;
+
+        const tombol = document.getElementById("tombol");
+        const angka = document.getElementById("angka");
+
+        tombol.addEventListener("click", () => {
+            jumlahKlik = jumlahKlik + 1;
+            angka.textContent = jumlahKlik;
+        });
+    </script>
+
+</body>
+</html>
