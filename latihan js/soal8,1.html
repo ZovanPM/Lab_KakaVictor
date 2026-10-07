@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<input type="password" id="Password">
+
+<button id="tombol">Tampilkan Password</button>
+
+<script>
+    const password = document.getElementById("Password");
+    const tombol = document.getElementById("tombol");
+
+    tombol.onclick = function() {
+        if (passwrod.type === "password") {
+            passwrod.type = "text";
+            tombol.innerHTML = "Sembunyikan Password";
+        } else {
+            passwrod.type = "password";
+            tombol.innerHTML = "Tampilkan Password";
+        }
+    }
+</script>
+

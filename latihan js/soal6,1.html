@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<button id="tombol">Klik Saya</button>
+
+<p id="teks">Warna belum diubah</p>
+
+<script>
+    const tombol = document.getElementById("tombol");
+    const teks = document.getElementById("teks");
+
+    tombol.onclick = function() {
+        teks.style.color = "red";
+        teks.innerHTML = "Warna telah diubah";
+    }
+</script>
